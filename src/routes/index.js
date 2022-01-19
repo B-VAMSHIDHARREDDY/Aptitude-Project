@@ -30,4 +30,8 @@ router.post('/adminlogin',(Req, Res)=> {
            // user or password doesn't match
     }
 });
+
+router.get('/StudentRegister',(req,res)=>{
+    res.render('StudentRegister')
+})
 module.exports = router;
