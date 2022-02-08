@@ -42,7 +42,10 @@ module.exports = {
       type:Sequelize.STRING,
       allowNull:false,
       unique:true
-     },});
+     },
+    createdAt:Sequelize.DATE,
+    updateAt:Sequelize.DATE
+    });
      
   },
 
