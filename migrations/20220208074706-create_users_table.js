@@ -44,7 +44,7 @@ module.exports = {
       unique:true
      },
     createdAt:Sequelize.DATE,
-    updateAt:Sequelize.DATE
+    updatedAt:Sequelize.DATE,
     });
      
   },
