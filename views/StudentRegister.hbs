@@ -4,45 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/mainStyle.css">
-    <title>Registration Page</title>
+    <title>Document</title>
 </head>
-<body align ="center">
-    <h1>Student Registration Page</h1>
-    <hr>
-        <form action="/Registration" method="POST">
-            <center>
+<body>
+    <div>
+        <form action="savestudent" method="post">
             <table>
                 <tr>
-                    <th><label for="name"><b>Username :</b></label></th>
-                    <th><input type="text" name="name" placeholder="Enter Username"/></th>
+                    <td>
+                        <label>User Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="username" placeholder="Enter User Name">
+                    </td>
                 </tr>
                 <tr>
-                    <th><label for="password"><b>Password :</b></label></th>
-                    <th><input type="text" name="password" placeholder="Enter Password" /></th>
+                    <td>
+                        <label>First Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="firstname" placeholder="Enter First Name">
+                    </td>
                 </tr>
                 <tr>
-                    <th><label for="fullName"><b>Full Name :</b></label></th>
-                    <th><input type="text" name="fullName" placeholder="Enter Full Name" /></th>
+                    <td>
+                        <label>Last Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="lastname" placeholder="Enter Last Name">
+                    </td>
                 </tr>
                 <tr>
-                    <th><label for="City"><b>City :</b></label></th>
-                    <th><input type="text" name="City" placeholder="Enter City" /></th>
+                    <td>
+                        <label>Email:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" placeholder="Enter email">
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        <label>Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" placeholder="Enter Password">
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        <label>Phone Number:</label>
+                    </td>
+                    <td>
+                        <input type="number" name="number" placeholder="Enter Number">
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        <label>Address:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="address" placeholder="Enter Address">
+                    </td>
                 </tr>
                 <tr>
-                    <th><label for="SSC"><b>SSC % :</b></label></th>
-                    <th><input type="text" name="SSC" placeholder="Enter SSC %" /></th>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
                 </tr>
-                <tr>
-                    <th><label for="Degree"><b>Degree % :</b></label></th>
-                    <th> <input type="text" name="Degree" placeholder="Enter Degree %" /></th>
-                </tr>
+
             </table>
-        </center>  
-            <p>
-                <button>Register</button>
-            </p>
         </form>
-    </hr>
+    </div>
 </body>
 </html>
