@@ -1,5 +1,6 @@
 const express = require('express');
 const User = require('../models/User');
+const Question = require('../models/Questions');
 const router = express.Router();
 
 const homepage=async(req,res)=>{
@@ -34,4 +35,16 @@ const savestu=async(req,res)=>{
     console.log(stu);
     res.redirect('student')
 }
- module.exports = {homepage,adlogin,stu,alogin,sturegister,savestu}
+const addquestion=async(req,res)=>{
+    await res.render('addquestion');
+
+}
+const AddQuestions=async(req,res)=>{
+    const{question,option1,option2,option3,option4,ans}=await req.body;
+    const que=await Question.create({
+        question,option1,option2,option3,option4,ans
+    }).catch(error=>console.log(error));
+    console.log("Sucees fully added");
+    res.redirect('addquestion')
+}
+ module.exports = {homepage,adlogin,stu,alogin,sturegister,savestu,addquestion,AddQuestions}
