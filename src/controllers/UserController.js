@@ -47,4 +47,10 @@ const AddQuestions=async(req,res)=>{
     console.log("Sucees fully added");
     res.redirect('addquestion')
 }
- module.exports = {homepage,adlogin,stu,alogin,sturegister,savestu,addquestion,AddQuestions}
+const AllStudentslist = async(req,res)=>{
+    const users = await User.findAll({
+        raw:true
+    }).catch(error=>console.log(error))
+    await res.render('AllStudent',{users});
+}
+ module.exports = {homepage,adlogin,stu,alogin,sturegister,savestu,addquestion,AddQuestions,AllStudentslist}

@@ -1,7 +1,7 @@
 const express = require('express');
 const res = require('express/lib/response');
 const router = express.Router();
-const{homepage,adlogin,stu,alogin,sturegister,savestu,addquestion,AddQuestions}=require('../controllers/UserController');
+const{homepage,adlogin,stu,alogin,sturegister,savestu,addquestion,AddQuestions,AllStudentslist}=require('../controllers/UserController');
 
 var app=express();
 var bodyParser = require('body-parser')
@@ -12,7 +12,7 @@ app.use( bodyParser.urlencoded() );
 // })
 router.get('/',homepage);
 
-       
+
 // router.get('/adminlogin',(req,res)=>{
 //     res.render('adminlogin');
 // })
@@ -44,5 +44,5 @@ router.get('/studentRegister',sturegister)
 router.post('/savestudent',savestu);
 router.get('/addquestion',addquestion);
 router.post('/AddQuetion',AddQuestions)
-
+router.get('/AllStudent',AllStudentslist)
 module.exports = router;
