@@ -53,4 +53,5 @@ const AllStudentslist = async(req,res)=>{
     }).catch(error=>console.log(error))
     await res.render('AllStudent',{users});
 }
+
  module.exports = {homepage,adlogin,stu,alogin,sturegister,savestu,addquestion,AddQuestions,AllStudentslist}
