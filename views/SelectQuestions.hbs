@@ -22,12 +22,12 @@
             {{#each que}}
             <tr>
                 {{!-- <td scope="col">{{this.id}}</td> --}}
-                <td><input type="checkbox" name="{{this.Id}}">{{this.question}}  </td>
+                <td><input type="checkbox" name="selectedquestions" value="{{this.question}}"/>{{this.question}}</td>
             </tr>
             {{/each}}
             </tbody>
 
-            <input type="submit" value="Create exam">
+            <input type="submit" class="btn btn-primary" value="Create exam">
         
         
 

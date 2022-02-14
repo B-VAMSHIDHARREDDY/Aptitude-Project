@@ -6,4 +6,4 @@ const AllQuetions=async(req,res)=>{
     }).catch(error=>console.log(error))
     await res.render("SelectQuestions",{que})
 }
-module.exports = {AllQuetions}
+module.exports = {AllQuetions}                  
