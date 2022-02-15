@@ -16,7 +16,11 @@ module.exports =db.define('Questions',{
     questions:{  
         type:Sequelize.STRING,
         allowNull:false,
-        unique:false
+        references:
+        {
+            model : users,
+            key: users.questions
+        }
     },
     time:{
         type:Sequelize.INTEGER,

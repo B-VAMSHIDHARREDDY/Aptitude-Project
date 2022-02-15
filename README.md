@@ -15,7 +15,7 @@ In this project admin has control over the examination it means he can create an
 # Instalation Requirements:-
     * npm init -y
     * npm i express express-handlebars sequelize mysql2
-    * npm i sequelize-cil -g
+    * npm i sequelize-cli -g
     * npm i nodemon -D
 
 # Changes---reqirements
