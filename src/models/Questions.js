@@ -30,12 +30,12 @@ module.exports =db.define('Questions',{
     },
     
     option4:{
-        type:Sequelize.INTEGER,
+        type:Sequelize.STRING,
         allowNull:false,
         unique:true
     },
     ans:{
-        type:Sequelize.NUMBER,
+        type:Sequelize.STRING,
         allowNull:false,
         unique:true
     }

@@ -1,9 +1,10 @@
 const Sequelize = require('sequelize');
 const db = require('../../db');
+const Questions = require('./Questions');
 
 
-module.exports =db.define('Questions',{
-     id: {
+module.exports =db.define('questionpaper',{
+    id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
     primaryKey: true
@@ -13,19 +14,15 @@ module.exports =db.define('Questions',{
         allowNull:false,
         unique:true
     },
-    questions:{  
-        type:Sequelize.STRING,
-        allowNull:false,
-        references:
-        {
-            model : users,
-            key: users.questions
-        }
-    },
-    time:{
+   
+    timer:{
         type:Sequelize.INTEGER,
         allowNull:false,
         unique:false
+    },
+    allquestions:{  
+        type:Sequelize.JSON,
+        allowNull:false,
     }
     
 })

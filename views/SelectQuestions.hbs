@@ -10,9 +10,9 @@
 </head>
 <body>
     <h1>Create exam</h1>
-    <form method="post" action="">
-    <label>Enter Exam Name</label><input type="text" placeholder="enter exam name"><br>
-    <label>Enter Exam Time</label><input type="number" placeholder="Mini.....">
+    <form method="post" action="/SelectQue">
+    <label>Enter Exam Name</label><input type="text" placeholder="enter exam name" name="testname"><br>
+    <label>Enter Exam Time</label><input type="number" placeholder="Mini....." name="timer">
     <table class="table table-bordered">
         <thead>
             {{!-- <th scope="col">Id</th> --}}
@@ -22,7 +22,7 @@
             {{#each que}}
             <tr>
                 {{!-- <td scope="col">{{this.id}}</td> --}}
-                <td><input type="checkbox" name="selectedquestions" value="{{this.question}}"/>{{this.question}}</td>
+                <td><input type="checkbox" name="allquestions" value="{{this.id}}"/>{{this.question}}</td>
             </tr>
             {{/each}}
             </tbody>
