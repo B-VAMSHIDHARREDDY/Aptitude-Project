@@ -26,18 +26,18 @@ module.exports = {
       option3:{
           type:Sequelize.STRING,
           allowNull:false,
-          unique:true
+          unique:false
       },
       
       option4:{
           type:Sequelize.STRING,
           allowNull:false,
-          unique:true
+          unique:false
       },
       ans:{
           type:Sequelize.STRING,
           allowNull:false,
-          unique:true
+          unique:false
       },
       createdAt:Sequelize.DATE,
       updatedAt:Sequelize.DATE,
