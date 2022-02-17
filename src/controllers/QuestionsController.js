@@ -19,6 +19,12 @@ const AllQuetions=async(req,res)=>{
     }).catch(error=>console.log(error))
     await res.render("SelectQuestions",{que})
 }
+const AllQuetions2=async(req,res)=>{
+    const que= await questions.findAll({
+        raw:true
+    }).catch(error=>console.log(error))
+    await res.render("AllQue",{que})
+}
 const selectedquestions = async(req,res)=>{
     const{testname,timer,allquestions}=await req.body;
     const quep=await Questionpaper.create({
@@ -27,4 +33,4 @@ const selectedquestions = async(req,res)=>{
   
     res.redirect('success')
 }
-module.exports = {AllQuetions,selectedquestions,addquestion,AddQuestions}
+module.exports = {AllQuetions,selectedquestions,addquestion,AddQuestions,AllQuetions2}

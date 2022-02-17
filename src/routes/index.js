@@ -2,7 +2,7 @@ const express = require('express');
 const res = require('express/lib/response');
 const router = express.Router();
 const{homepage,adlogin,stu,alogin,sturegister,savestu,AllStudentslist}=require('../controllers/UserController');
-const{addquestion,AddQuestions,AllQuetions,selectedquestions}=require('../controllers/QuestionsController');
+const{addquestion,AddQuestions,AllQuetions,selectedquestions,AllQuetions2}=require('../controllers/QuestionsController');
 const{stlogin,slogin}=require('../controllers/StudentController');
 var app=express();
 var bodyParser = require('body-parser')
@@ -20,4 +20,5 @@ router.get('/SelectQuestions',AllQuetions);
 router.post('/SelectQue',selectedquestions);
 router.get('/stulogin',stlogin);
 router.post('/stulogin',slogin)
+router.get('/AllQue',AllQuetions2)
 module.exports = router;

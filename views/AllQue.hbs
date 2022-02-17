@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Students</h1>
+    <table class="table table-bordered">
+        <thead>
+            <th scope="col">Id</th>
+            <th scope="col">Question</th>
+            <th scope="col">Option1</Option></th>
+            <th scope="col">Option2</th>
+            <th scope="col">Option3</th>
+            <th scope="col">Option4</th>
+            <th scope="col">Answer</th>
+            <th scope="col">Edit Student</th>
+            <th scope="col">Delete Student</th>
+        </thead>
+        <tbody>
+            {{#each que}}
+            <tr>
+                <td scope="col">{{this.id}}</td>
+                <td>{{this.question}}</td>
+                <td>{{this.option1}}</td>
+                <td>{{this.option2}}</td>
+                <td>{{this.option3}}</td>
+                <td>{{this.option3}}</td>
+                <td>{{this.option4}}</td>
+                <td>{{this.ans}}</td>
+                <td><a href="#">Edit</a></td>
+                <td><a href="#">Delete</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
