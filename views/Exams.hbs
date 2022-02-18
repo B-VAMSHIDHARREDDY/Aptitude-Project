@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+
     <title>Document</title>
 </head>
 <body>
-<div class="card">
-  <h5 class="card-header">Student Home</h5>
-  <div class="card-body">
-    <h5 class="card-title">Student</h5>
-    <p class="card-text">Welcome Student check Available exams here.</p>
-    <a href="/Exams" class="btn btn-primary">Available exams</a>
-  </div>
-</div>
+    <table class="table table-striped">
+        <tr>
+            <th>ExamId</th>
+            <th>ExamName</th>
+            <th></th>
+        </tr>
+        {{#each ae}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.testname}}</td>
+            <td><button class="btn"><a href="#">Take Exam</a></button></td>
+
+        </tr>
+        {{/each}}
+</table>
 </body>
 </html>
